@@ -161,10 +161,10 @@ segmented
 
 ---
 
-![dataset/input/svar01.BMP](dataset/input/svar01.BMP)
+![dataset/input/super01.BMP](dataset/input/super01.BMP)
 
 original
 
-![dataset/output/seg_clusting_svar01.jpg](dataset/output/seg_clusting_svar01.jpg)
+![dataset/output/seg_clusting_super01.jpg](dataset/output/seg_clusting_super01.jpg)
 
 segmented
