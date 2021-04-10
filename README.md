@@ -44,7 +44,7 @@ def cannyEdgeDetection(img_array: np.array) -> np.array
 
 Original
 
-![dataset/output/edges_cyl01.jpg](dataset/output/edges_cyl01.jpg)
+![dataset/assets/edges_cyl01.jpg](dataset/assets/edges_cyl01.jpg)
 
 After Edge Detection
 
@@ -55,7 +55,7 @@ def dilate(img_array: np.array, win: int = 1) -> np.array
 
 Original
 
-![dataset/output/dilated_inter01.jpg](dataset/output/dilated_inter01.jpg)
+![dataset/assets/dilated_inter01.jpg](dataset/assets/dilated_inter01.jpg)
 
 Segmented and Dilated
 
@@ -66,7 +66,7 @@ def erode(img_array: np.array, win: int = 1) -> np.array
 
 Original
 
-![dataset/output/eroded_let01.jpg](dataset/output/eroded_let01.jpg)
+![dataset/assets/eroded_let01.jpg](dataset/assets/eroded_let01.jpg)
 
 Segmented and Eroded
 
@@ -77,7 +77,7 @@ def histogramThresholding(img_array: np.array) -> np.array
 
 Original
 
-![dataset/output/seg_thresholding_mod01.jpg](dataset/output/seg_thresholding_mod01.jpg)
+![dataset/assets/seg_thresholding_mod01.jpg](dataset/assets/seg_thresholding_mod01.jpg)
 
 Segmented
 
