@@ -1,7 +1,5 @@
 # Image Analysis - Part2
 
-# CMSC 630 Project 2
-
 ### Image Segmentation and Clustering
 
 ## Overview
@@ -42,54 +40,34 @@ The output of this program can be seen in two places. The first is in the output
 ```python
 def cannyEdgeDetection(img_array: np.array) -> np.array
 ```
-![dataset/input/cyl01.BMP](dataset/input/cyl01.BMP)
-
-Original
-
-![dataset/output/edges_cyl01.jpg](dataset/output/edges_cyl01.jpg)
-
-After Edge Detection
+Original | After Edge Detection
+- | -
+![dataset/input/cyl01.BMP](dataset/input/cyl01.BMP) | ![dataset/output/edges_cyl01.jpg](dataset/output/edges_cyl01.jpg)
 
 ```python
 def dilate(img_array: np.array, win: int = 1) -> np.array
 ```
-![dataset/input/inter01.BMP](dataset/input/inter01.BMP)
-
-Original
-
-![dataset/output/dilated_inter01.jpg](dataset/output/dilated_inter01.jpg)
-
-Segmented and Dilated
+Original | Segmented and Dilated
+- | -
+![dataset/input/inter01.BMP](dataset/input/inter01.BMP) | ![dataset/output/dilated_inter01.jpg](dataset/output/dilated_inter01.jpg)
 
 ```python
 def erode(img_array: np.array, win: int = 1) -> np.array
 ```
-![dataset/input/let01.BMP](dataset/input/let01.BMP)
-
-Original
-
-![dataset/output/eroded_let01.jpg](dataset/output/eroded_let01.jpg)
-
-Segmented and Eroded
+Original | Segmented and Eroded
+- | -
+![dataset/input/let01.BMP](dataset/input/let01.BMP) | ![dataset/output/eroded_let01.jpg](dataset/output/eroded_let01.jpg)
 
 ```python
 def histogramThresholding(img_array: np.array) -> np.array
 ```
-![dataset/input/mod01.BMP](dataset/input/mod01.BMP)
-
-Original
-
-![dataset/output/seg_thresholding_mod01.jpg](dataset/output/seg_thresholding_mod01.jpg)
-
-Segmented
+Original | Segmented
+- | -
+![dataset/input/mod01.BMP](dataset/input/mod01.BMP) | ![dataset/output/seg_thresholding_mod01.jpg](dataset/output/seg_thresholding_mod01.jpg)
 
 ```python
 def histogramClustering(img_array: np.array) -> np.array
 ```
-![dataset/input/super01.BMP](dataset/input/super01.BMP)
-
-Original
-
-![dataset/output/seg_clusting_super01.jpg](dataset/output/seg_clusting_super01.jpg)
-
-Segmented
+Original | Segmented
+- | -
+![dataset/input/super01.BMP](dataset/input/super01.BMP) | ![dataset/output/seg_clusting_super01.jpg](dataset/output/seg_clusting_super01.jpg)
