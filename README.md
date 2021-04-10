@@ -84,10 +84,10 @@ Segmented
 ```python
 def histogramClustering(img_array: np.array) -> np.array
 ```
-![dataset/input/super01.BMP](dataset/input/super01.BMP)
+![dataset/input/para01.BMP](dataset/input/para01.BMP)
 
 Original
 
-![dataset/output/seg_clusting_super01.jpg](dataset/output/seg_clusting_super01.jpg)
+![dataset/assets/seg_clusting_para01.jpg](dataset/assets/seg_clusting_para01.jpg)
 
 Segmented
