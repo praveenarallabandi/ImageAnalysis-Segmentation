@@ -1,0 +1,46 @@
+#####################################################################
+#
+# INPUT_DIR: Input directory for images
+# OUTPUTDIR: Output direcotry to save processed images
+#
+#####################################################################
+INPUT_DIR = "./test/"
+OUTPUT_DIR = "./output/"
+
+INPUT_SEG_DIR = "./dataset/input/"
+OUTPUT_SEG_DIR = "./dataset/output/"
+FILE_EXTENSION = ".BMP"
+
+# The number of process workers in the process pool for work on batches
+NUM_OF_PROCESSES = 10
+
+
+#################################################
+#
+# COLOR_CHANNEL: Color channel "R", "B" or "G"
+#
+#################################################
+COLOR_CHANNEL = "G"
+
+######################################################################
+#
+# SALT_PEPPER_STRENGTH and GAUSS_NOISE_STRENGTH
+#
+####################################3#################################
+SALT_PEPPER_STRENGTH = 0.1
+GAUSS_NOISE_STRENGTH = 0.1
+
+#####################################################################
+#
+# LINEAR_MASK and MEDIAN_MASK
+#
+#####################################################################
+LINEAR_MASK = 9
+LINEAR_WEIGHTS = [
+  [1, 0, 0],
+  [0, 1, 0],
+  [0, 0, 1]
+]
+
+MEDIAN_MASK = 1
+MEDIAN_WEIGHTS = [[1]]
