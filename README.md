@@ -40,9 +40,8 @@ The programming language of choice for this project was python. The high-level r
 The output of this program can be seen in two places. The first is in the output directory specified in the `toml` configuration file. In the output directory, there are the grayscale images from each operation with the file name `{operation}_{original image}.BMP` (e.g. `edges_svar53.BMP`).
 
 ```python
-    def cannyEdgeDetection(img_array: np.array) -> np.array
+def cannyEdgeDetection(img_array: np.array) -> np.array
 ```
-
 ![dataset/input/cyl01.BMP](dataset/input/cyl01.BMP)
 
 Original
@@ -52,49 +51,45 @@ Original
 After Edge Detection
 
 ```python
-    def dilate(img_array: np.array, win: int = 1) -> np.array
+def dilate(img_array: np.array, win: int = 1) -> np.array
 ```
-
 ![dataset/input/inter01.BMP](dataset/input/inter01.BMP)
 
-original
+Original
 
 ![dataset/output/dilated_inter01.jpg](dataset/output/dilated_inter01.jpg)
 
 Segmented and Dilated
 
 ```python
-    def erode(img_array: np.array, win: int = 1) -> np.array
+def erode(img_array: np.array, win: int = 1) -> np.array
 ```
-
 ![dataset/input/let01.BMP](dataset/input/let01.BMP)
 
-original
+Original
 
 ![dataset/output/eroded_let01.jpg](dataset/output/eroded_let01.jpg)
 
 Segmented and Eroded
 
 ```python
-    def histogramThresholding(img_array: np.array) -> np.array
+def histogramThresholding(img_array: np.array) -> np.array
 ```
-
 ![dataset/input/mod01.BMP](dataset/input/mod01.BMP)
 
-original
+Original
 
 ![dataset/output/seg_thresholding_mod01.jpg](dataset/output/seg_thresholding_mod01.jpg)
 
-segmented
+Segmented
 
 ```python
-    def histogramClustering(img_array: np.array) -> np.array
+def histogramClustering(img_array: np.array) -> np.array
 ```
-
 ![dataset/input/super01.BMP](dataset/input/super01.BMP)
 
-original
+Original
 
 ![dataset/output/seg_clusting_super01.jpg](dataset/output/seg_clusting_super01.jpg)
 
-segmented
+Segmented
