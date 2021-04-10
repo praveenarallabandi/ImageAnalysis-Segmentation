@@ -72,7 +72,7 @@ def dilate(img_arr: np.array, win: int = 1) -> np.array:
     return eroded_img
 
 
-def histogram_thresholding(img_arr: np.array) -> np.array:
+def histogramThresholding(img_arr: np.array) -> np.array:
 
     hist = histogram(img_arr)
 
@@ -87,7 +87,7 @@ def histogram_thresholding(img_arr: np.array) -> np.array:
     return img_copy.reshape(img_arr.shape)
 
 
-def histogram_clustering(img_arr: np.array) -> np.array:
+def histogramClustering(img_arr: np.array) -> np.array:
     img_hist = histogram(img_arr)
     out = k_means(img_hist, 2)
 
@@ -102,7 +102,7 @@ def histogram_clustering(img_arr: np.array) -> np.array:
     return img_copy.reshape(img_arr.shape)
 
 
-def canny_edge_detection(img_arr: np.array) -> np.array:
+def cannyEdgeDetection(img_arr: np.array) -> np.array:
 
     guass = gaussianKernel(5)
 
@@ -140,13 +140,13 @@ def apply_operations(file: Path) -> str:
         img = select_channel(img, conf["COLOR_CHANNEL"])
         
         # Edge detection
-        edges = canny_edge_detection(img)
+        edges = cannyEdgeDetection(img)
 
         # Histogram Clustering Segmentation
-        segmented_clustering = histogram_clustering(img)
+        segmented_clustering = histogramClustering(img)
 
         # Histogram Thresholding Segmentation
-        segmented_thresholding = histogram_thresholding(img)
+        segmented_thresholding = histogramThresholding(img)
 
         # Dilation
         dilated = dilate(segmented_thresholding)

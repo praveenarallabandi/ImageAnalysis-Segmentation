@@ -117,7 +117,9 @@ The programming language of choice for this project was python. The high-level r
 
 The output of this program can be seen in two places. The first is in the output directory specified in the `toml` configuration file. In the output directory, there are the grayscale images from each operation with the file name `{operation}_{original image}.BMP` (e.g. `edges_svar53.BMP`).
 
-    canny_edge_detection(img_array: np.array) -> np.array
+```python
+    def cannyEdgeDetection(img_array: np.array) -> np.array
+```
 
 ![dataset/input/cyl01.BMP](dataset/input/cyl01.BMP)
 
@@ -127,7 +129,9 @@ Original
 
 After Edge Detection
 
-    dilate(img_array: np.array, win: int = 1) -> np.array
+```python
+    def dilate(img_array: np.array, win: int = 1) -> np.array
+```
 
 ![dataset/input/inter01.BMP](dataset/input/inter01.BMP)
 
@@ -137,7 +141,9 @@ original
 
 Segmented and Dilated
 
-    erode(img_array: np.array, win: int = 1) -> np.array
+```python
+    def erode(img_array: np.array, win: int = 1) -> np.array
+```
 
 ![dataset/input/let01.BMP](dataset/input/let01.BMP)
 
@@ -147,7 +153,9 @@ original
 
 Segmented and Eroded
 
-    histogram_thresholding(img_array: np.array) -> np.array
+```python
+    def histogramThresholding(img_array: np.array) -> np.array
+```
 
 ![dataset/input/mod01.BMP](dataset/input/mod01.BMP)
 
@@ -157,9 +165,9 @@ original
 
 segmented
 
-    histogram_clustering(img_array: np.array) -> np.array
-
----
+```python
+    def histogramClustering(img_array: np.array) -> np.array
+```
 
 ![dataset/input/super01.BMP](dataset/input/super01.BMP)
 
