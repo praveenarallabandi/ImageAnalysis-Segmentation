@@ -6,7 +6,7 @@
 
 The program takes a batch of images as input and runs a given set of operations on them (Edge Detection, Histogram Clustering, Histogram Thresholding, Dilation, and Erosion). All of these operations output a new image for each image in the batch. A TOML file in the source code's root directory is used to configure the operations, such as the strength of noise and the weights for filters. All critical functions are implemented from scratch except for array operations that use the third-party mathematics library `NumPy.` 
 
-### Usage
+#### Usage
 
     git clone https://github.com/jonaylor89/image-segmentation.git
     cd image-segmentation
@@ -45,7 +45,7 @@ def cannyEdgeDetection(img_array: np.array) -> np.array
 |:---:|:---:|
 | Original | After Edge Detection |
 
-### DILATION
+#### DILATION
 ```python
 def dilate(img_array: np.array, win: int = 1) -> np.array
 ```
@@ -53,7 +53,7 @@ def dilate(img_array: np.array, win: int = 1) -> np.array
 |:---:|:---:|
 | Original | Dialtion |
 
-### Erosion
+#### Erosion
 ```python
 def erode(img_array: np.array, win: int = 1) -> np.array
 ```
@@ -61,7 +61,7 @@ def erode(img_array: np.array, win: int = 1) -> np.array
 |:---:|:---:|
 | Original | Erosion |
 
-### Segmentation - Histogram Thresholding
+#### Segmentation - Histogram Thresholding
 ```python
 def histogramThresholding(img_array: np.array) -> np.array
 ```
@@ -69,7 +69,7 @@ def histogramThresholding(img_array: np.array) -> np.array
 |:---:|:---:|
 | Original | Segmentation - Histogram Thresholding |
 
-### Segmentation - Clustering (k-means)
+#### Segmentation - Clustering (k-means)
 ```python
 def histogramClustering(img_array: np.array) -> np.array
 ```
