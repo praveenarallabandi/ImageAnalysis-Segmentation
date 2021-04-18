@@ -37,7 +37,7 @@ The programming language of choice for this project was python. The high-level r
 
 The output of this program can be seen in two places. The first is in the output directory specified in the `toml` configuration file. In the output directory, there are the grayscale images from each operation with the file name `{operation}_{original image}.BMP` (e.g. `edges_svar53.BMP`).
 
-### EDGE DETECTION
+#### EDGE DETECTION
 ```python
 def cannyEdgeDetection(img_array: np.array) -> np.array
 ```
