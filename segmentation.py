@@ -22,9 +22,7 @@ configLoc = './config.toml'
 
 def erode(img_arr: np.array, win: int = 1) -> np.array:
     """
-
     erodes 2D numpy array holding a binary image
-
     """
 
     r = np.zeros(img_arr.shape)
@@ -64,7 +62,6 @@ def erode(img_arr: np.array, win: int = 1) -> np.array:
 
 
 def dilate(img_arr: np.array, win: int = 1) -> np.array:
-
     inverted_img = np.invert(img_arr)
     eroded_inverse = erode(inverted_img, win).astype(np.uint8)
     eroded_img = np.invert(eroded_inverse)
@@ -119,9 +116,8 @@ def cannyEdgeDetection(img_arr: np.array) -> np.array:
     return canny_image
 
 
-def apply_operations(file: Path) -> str:
+def processImage(file: Path) -> str:
     """
-    Image segmentation–requirement for the project part 2:
     1. Implement one selected edge detection algorithm.
     2. Implement dilation and erosion operators.
     3. Apply segmentation into two groups –foreground (cells) and background (everything else).
@@ -178,26 +174,16 @@ def processImages(files: List[Path]):
 
     echo(
         style("[INFO] ", fg="green")
-        + f"initilizing process pool (number of processes: {conf['NUM_OF_PROCESSES']})"
+        + f"Processing (number of processes: {conf['NUM_OF_PROCESSES']})"
     )
     echo(style("[INFO] ", fg="green") + "compiling...")
     with Pool(conf["NUM_OF_PROCESSES"]) as p:
         with tqdm(total=len(files)) as pbar:
-            for res in tqdm(p.imap(apply_operations, files)):
+            for res in tqdm(p.imap(processImage, files)):
                 pbar.write(res + f" finished...")
                 pbar.update()
 
 
-""" @click.command()
-@click.option(
-    "config_location",
-    "-c",
-    "--config",
-    envvar="CMSC630_CONFIG",
-    type=click.Path(exists=True),
-    default="config.toml",
-    show_default=True,
-) """
 def main(config_location: str):
     clear()
     global conf
@@ -207,14 +193,10 @@ def main(config_location: str):
     files: List = list(base_path.glob(f"*{conf['FILE_EXTENSION']}"))
     echo(
         style("[INFO] ", fg="green")
-        + f"image directory: {str(base_path)}; {len(files)} images found"
+        + f"Image directory: {str(base_path)} - {len(files)} images found"
     )
 
     Path(conf["OUTPUT_SEG_DIR"]).mkdir(parents=True, exist_ok=True)
-
-    # [!!!] Only for development
-    # DATA_SUBSET = 1
-    # files = files[:DATA_SUBSET]
 
     t0 = time.time()
     processImages(files)
