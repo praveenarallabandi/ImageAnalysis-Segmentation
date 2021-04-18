@@ -40,13 +40,9 @@ The output of this program can be seen in two places. The first is in the output
 ```python
 def cannyEdgeDetection(img_array: np.array) -> np.array
 ```
-![dataset/input/cyl01.BMP](dataset/input/cyl01.BMP)
-
-Original
-
-![dataset/assets/edges_cyl01.jpg](dataset/assets/edges_cyl01.jpg)
-
-After Edge Detection
+| ![dataset/input/cyl01.BMP](dataset/input/cyl01.BMP) | ![dataset/assets/edges_cyl01.jpg](dataset/assets/edges_cyl01.jpg)
+|:---:|:---:|
+| Original | After Edge Detection |
 
 ```python
 def dilate(img_array: np.array, win: int = 1) -> np.array
