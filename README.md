@@ -47,7 +47,7 @@ The programming language of choice for this project was python. The high-level r
 
 ### Input
 
-The input is specified in `toml` defaulted to `dataset\input`. There are seven default images from each class of image in input folder
+The input is specified in `toml` defaulted to `dataset\input` folder. There are seven default images from each class of image in input folder
 * cyl01
 * inter01
 * let01
