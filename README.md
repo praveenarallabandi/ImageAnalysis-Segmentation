@@ -60,7 +60,7 @@ The input is specified in `toml` defaulted to `dataset\input` folder. There are 
 
 The results are in the output directory specified in the `toml` configuration file. In the output directory, there are the grayscale images from each operation with the file name. `{operation}_{original image}.BMP` (e.g. `edges_svar53.BMP`).
 
-#### EDGE DETECTION
+#### Edge Detection
 ```python
 def cannyEdgeDetection(img_array: np.array) -> np.array
 ```
@@ -68,7 +68,7 @@ def cannyEdgeDetection(img_array: np.array) -> np.array
 |:---:|:---:|
 | Original | Edge Detection |
 
-#### DILATION
+#### Dilation
 ```python
 def dilate(img_array: np.array, win: int = 1) -> np.array
 ```
