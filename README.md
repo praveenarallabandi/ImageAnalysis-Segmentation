@@ -43,7 +43,7 @@ def cannyEdgeDetection(img_array: np.array) -> np.array
 ```
 | ![dataset/input/cyl01.BMP](dataset/input/cyl01.BMP) | ![dataset/assets/edges_cyl01.jpg](dataset/assets/edges_cyl01.jpg)
 |:---:|:---:|
-| Original | After Edge Detection |
+| Original | Edge Detection |
 
 #### DILATION
 ```python
@@ -76,3 +76,11 @@ def histogramClustering(img_array: np.array) -> np.array
 | ![dataset/input/para01.BMP](dataset/input/para01.BMP) | ![dataset/assets/seg_clusting_para01.jpg](dataset/assets/seg_clusting_para01.jpg) |
 |:---:|:---:|
 | Original | Clustering (k-means) |
+
+#### Additional Algorithm - Watershed Segmentation
+```python
+class Watershed(object)
+```
+| ![dataset/input/para01.BMP](dataset/input/para01.BMP) | ![dataset/assets/ws_segmentation_para01.jpg](dataset/assets/ws_segmentation_para01.jpg) |
+|:---:|:---:|
+| Original | Watershed Segmentation |
