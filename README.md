@@ -45,6 +45,19 @@ The programming language of choice for this project was python. The high-level r
 
 ## Results
 
+### Input
+
+The input is specified in `toml` defaulted to `dataset\input`. There are seven default images from each class of image in input folder
+* cyl01
+* inter01
+* let01
+* mod01
+* para01
+* super01
+* svar01
+
+### output
+
 The results are in the output directory specified in the `toml` configuration file. In the output directory, there are the grayscale images from each operation with the file name. `{operation}_{original image}.BMP` (e.g. `edges_svar53.BMP`).
 
 #### EDGE DETECTION
