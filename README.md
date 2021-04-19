@@ -4,7 +4,17 @@
 
 ## Overview
 
-The program takes a batch of images as input and runs a given set of operations on them (Edge Detection, Histogram Clustering, Histogram Thresholding, Dilation, and Erosion). All of these operations output a new image for each image in the batch. A TOML file in the source code's root directory is used to configure the operations, such as the strength of noise and the weights for filters. All critical functions are implemented from scratch except for array operations that use the third-party mathematics library `NumPy.` 
+The program takes a batch of images as input and runs a given set of operations on them (Edge Detection, Histogram Clustering, Histogram Thresholding, Dilation, and Erosion). All of these operations output a new image for each image in the batch. A TOML file in the source code's root directory is used to configure the operations, such as the strength of noise and the weights for filters. All critical functions are implemented from scratch except for array operations that use the third-party mathematics library `NumPy.`
+
+Below operations are perfomed
+
+* Edge Detection - Canny Edge Detection
+* Image Dialtion
+* Image Erosion
+* Image Segmentation
+    - Clustering using k-means
+    - Histogram Thresholding
+    - Watershed Segmentation Algorithm
 
 #### Usage
 
@@ -35,7 +45,7 @@ The programming language of choice for this project was python. The high-level r
 
 ## Results
 
-The output of this program can be seen in two places. The first is in the output directory specified in the `toml` configuration file. In the output directory, there are the grayscale images from each operation with the file name `{operation}_{original image}.BMP` (e.g. `edges_svar53.BMP`).
+The results are in the output directory specified in the `toml` configuration file. In the output directory, there are the grayscale images from each operation with the file name. `{operation}_{original image}.BMP` (e.g. `edges_svar53.BMP`).
 
 #### EDGE DETECTION
 ```python
