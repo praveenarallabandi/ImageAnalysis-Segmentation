@@ -117,19 +117,6 @@ def cannyEdgeDetection(img_arr: np.array) -> np.array:
 
 
 def processImage(file: Path) -> str:
-    """
-    1. Implement one selected edge detection algorithm.
-    2. Implement dilation and erosion operators.
-    3. Apply segmentation into two groups –foreground (cells) and background (everything else).
-    4. Implement two segmentation techniques (they must be implemented by you, not API calls):
-        + histogram thresholding
-        + histogram clustering (basic approach using two clusters and k-means)
-    5. Present example results before and after edge detection
-        / dilation
-        / erosion
-        / segmentation for each respective class of cells (seven in total)
-    """
-
     try:
         img = get_image_data(file)
         conf = toml.load(configLoc) # need to change to global variable
