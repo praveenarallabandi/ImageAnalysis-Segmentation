@@ -18,7 +18,7 @@ Below operations are perfomed
 
 #### Usage
 
-    git clone https://github.com/jonaylor89/image-segmentation.git
+    git clone https://github.com/praveenarallabandi/ImageAnalysis-Segmentation
     cd image-segmentation
     pip3 install --user pipenv
     pipenv install
