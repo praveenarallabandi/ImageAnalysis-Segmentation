@@ -6,7 +6,7 @@ from numba import njit
 from pathlib import Path
 
 
-def get_image_data(filename: Path) -> np.array:
+def getImageData(filename: Path) -> np.array:
     """
     Converts a bmp image to a numpy array
     """
@@ -21,9 +21,9 @@ def exportImage(img_arr: np.array, filename: str, conf: dict) -> None:
     img.save("./dataset/output/" + filename + ".jpg")
 
 
-def select_channel(img_array: np.array, color: str = "red") -> np.array:
+def selectChannel(img_array: np.array, color: str = "red") -> np.array:
     """
-    select_channel isolates a color channel from a RGB image represented as a numpy array.
+    selectChannel isolates a color channel from a RGB image represented as a numpy array.
     """
     if color == "R":
         return img_array[:, :, 0]
@@ -59,13 +59,13 @@ def nonMaxSuppression(img, D):
     angle = D * 180.0 / np.pi
     angle[angle < 0] += 180
 
-    Z = fast_suppression(img, angle, N, M, Z)
+    Z = fastSuppression(img, angle, N, M, Z)
 
     return Z
 
 
 @njit(fastmath=True, cache=True)
-def fast_suppression(img, angle, N, M, Z):
+def fastSuppression(img, angle, N, M, Z):
     for i in range(1, M - 1):
         for j in range(1, N - 1):
             try:
@@ -195,7 +195,7 @@ def convolve(img_array: np.array, img_filter: np.array) -> np.array:
 
 
 # @njit
-def find_middle_hist(hist: np.array, min_count: int = 5) -> int:
+def findMiddleHist(hist: np.array, min_count: int = 5) -> int:
 
     num_bins = len(hist)
     hist_start = 0

@@ -73,7 +73,7 @@ def histogramThresholding(img_arr: np.array) -> np.array:
 
     hist = histogram(img_arr)
 
-    middle = find_middle_hist(hist)
+    middle = findMiddleHist(hist)
 
     img_copy = img_arr.copy()
     img_copy[img_copy > middle] = 255
@@ -118,9 +118,9 @@ def cannyEdgeDetection(img_arr: np.array) -> np.array:
 
 def processImage(file: Path) -> str:
     try:
-        img = get_image_data(file)
+        img = getImageData(file)
         conf = toml.load(configLoc) # need to change to global variable
-        img = select_channel(img, conf["COLOR_CHANNEL"])
+        img = selectChannel(img, conf["COLOR_CHANNEL"])
         
         # Edge detection
         edges = cannyEdgeDetection(img)
