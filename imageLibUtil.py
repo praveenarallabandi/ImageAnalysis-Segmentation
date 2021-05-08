@@ -18,7 +18,7 @@ def exportImage(img_arr: np.array, filename: str, conf: dict) -> None:
     """
     img = Image.fromarray(img_arr)
     img = img.convert("L")
-    img.save("./dataset/output/" + filename + ".jpg")
+    img.save("./dataset/output/" + filename + ".bmp")
 
 
 def selectChannel(img_array: np.array, color: str = "red") -> np.array:
